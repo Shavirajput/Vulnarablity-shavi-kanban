@@ -93,6 +93,7 @@ export function KanbanColumn({ id, title, tasks, count, color }: KanbanColumnPro
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         columnId={id}
+        status={id as Task['status']}
       />
     </div>
   );
