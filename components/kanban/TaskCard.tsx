@@ -5,7 +5,8 @@ import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { useDispatch } from 'react-redux'
 import { Task } from '@/lib/features/kanban/kanbanSlice'
-import { deleteTask, AppDispatch } from '@/lib/features/kanban/kanbanSlice'
+import { deleteTask } from '@/lib/features/kanban/kanbanSlice'
+import { AppDispatch } from '@/lib/store'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -169,6 +170,7 @@ export default function TaskCard({ task, isDragging = false }: TaskCardProps) {
         onClose={() => setIsEditModalOpen(false)}
         task={task}
         status={task.status}
+        columnId={task.status}
       />
     </>
   )
