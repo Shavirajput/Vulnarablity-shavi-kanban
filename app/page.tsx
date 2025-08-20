@@ -9,8 +9,8 @@ export default function Home() {
   const { isAuthenticated } = useSelector((state: RootState) => state.auth)
 
   return (
-    <>
+    <div className="min-h-screen">
       {isAuthenticated ? <KanbanBoard /> : <AuthForm />}
-    </>
+    </div>
   )
 }
