@@ -21,6 +21,7 @@ export interface Task {
 }
 
 export interface Column {
+  color: string
   id: string
   title: string
   status: Task['status']
